@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Car_S</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Active_Orders" />
+    <string name="active_orders">Active Orders</string>
+    <string name="complete_orders">Complete Orders</string>
+    <string name="pending_orders">Pending Orders</string>
 </resources>

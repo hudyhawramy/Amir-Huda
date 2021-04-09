@@ -219,7 +219,7 @@
             android:layout_height="109dp"
             app:srcCompat="@drawable/keshaka_nazanm"
             tools:layout_editor_absoluteX="270dp"
-            tools:layout_editor_absoluteY="233dp" />
+            tools:layout_editor_absoluteY="233dp"/>
 
 
     </LinearLayout>

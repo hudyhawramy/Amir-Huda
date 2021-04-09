@@ -3,6 +3,7 @@ package com.example.car_s;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -69,6 +70,8 @@ public class ListdataActivity extends AppCompatActivity {
     }
 
 
-
-
+    public void contract(View view) {
+        Intent intent = new Intent(ListdataActivity.this,Nardni_Kesha.class);
+        startActivity(intent);
     }
+}

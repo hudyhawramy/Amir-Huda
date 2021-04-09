@@ -119,13 +119,13 @@ public class Main_User extends AppCompatActivity implements View.OnClickListener
 
                 break;
 
-      /**      case R.id.nazanm:
-                Data(R.drawable.image_ten,R.drawable.arn10,R.drawable.text_10);
+           case R.id.nazanm:
 
 
+               Intent intent = new Intent(Main_User.this,Nazanm.class);
+               startActivity(intent);
 
-
-                break; **/
+                break;
         }
 
     }

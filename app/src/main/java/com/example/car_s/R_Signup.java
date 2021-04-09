@@ -42,13 +42,15 @@ public class R_Signup extends AppCompatActivity {
         phone = findViewById(R.id.Phone);
         exper = findViewById(R.id.experience);
         pass = findViewById(R.id.password);
-        button = findViewById(R.id.button2);
+        button = findViewById(R.id.register);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addRepairmen();
-
+                Intent intent = new Intent(R_Signup.this, Main_Repairman.class);
+                startActivity(intent);
+                finish();
 
 
             }
@@ -138,4 +140,5 @@ public class R_Signup extends AppCompatActivity {
         }
 
     }
+
 }
