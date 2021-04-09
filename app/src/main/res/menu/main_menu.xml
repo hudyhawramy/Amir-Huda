@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:layout_gravity="end">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="سەرەتا" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/setting"
+            android:title="ڕێکخستن" />
+
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/aboutus_icon"
+            android:title="دەربارەی ئێمە " />
+
+
+    </group>
+
+
+    <item android:title="پێشینەکان">
+        <menu>
+            <item
+                android:id="@+id/nav_previos"
+                android:icon="@drawable/previos_icon"
+                android:title="پێشینەکان" />
+
+        </menu>
+
+
+    </item>
+
+
+</menu>

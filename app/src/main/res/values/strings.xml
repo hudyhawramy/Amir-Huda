@@ -6,4 +6,9 @@
     <string name="active_orders">Active Orders</string>
     <string name="complete_orders">Complete Orders</string>
     <string name="pending_orders">Pending Orders</string>
+
+    <string name="navigation_open">Open navigation drawer</string>
+    <string name="navigation_close">Close navigation drawer</string>
+
+
 </resources>

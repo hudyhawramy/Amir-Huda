@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Car_S">
-        <activity android:name=".Main_Repairman"></activity>
+        <activity android:name=".Setting"></activity>
+        <activity android:name=".Navigation" />
+        <activity android:name=".Main_Repairman" />
         <activity android:name=".Nazanm" />
         <activity android:name=".ListdataActivity" />
         <activity android:name=".MainUser2" />
