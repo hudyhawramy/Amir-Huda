@@ -14,7 +14,14 @@
         <!-- Customize your theme here. -->
 
 
-
-
     </style>
+
+    <style name="Theme.Car_S.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Car_S.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Car_S.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
