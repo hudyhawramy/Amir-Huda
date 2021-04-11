@@ -22,7 +22,6 @@
             android:name=".ScreenItem"
             tools:ignore="Instantiatable" />
         <activity android:name=".IntroActivity" />
-        <activity android:name=".Pishakan" />
         <activity android:name=".Main_User" />
         <activity android:name=".U_Signup" />
         <activity android:name=".R_Signup" />
