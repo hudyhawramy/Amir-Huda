@@ -32,6 +32,7 @@ public class MainUser2 extends AppCompatActivity {
     ArrayList<String> Info5 = new ArrayList<>();
     ArrayList<String> Info6 = new ArrayList<>();
 
+    
 
 
     @Override
