@@ -50,8 +50,6 @@
         android:textSize="30dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/gradient_start_color"
-        android:drawableTint="@color/gradient_start_color"
         android:onClick="next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

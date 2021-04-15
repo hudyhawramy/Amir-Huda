@@ -24,9 +24,9 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="وێنەی مۆڵەتی کار کردن"
+        android:text="وێنەی کەسی"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -295,14 +295,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.274" />
 
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ناوی بەکارهێنەر"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="MissingConstraints" />
+
     <Button
-        android:id="@+id/register"
+        android:id="@+id/button2"
         android:layout_width="130dp"
         android:layout_height="44dp"
         android:text="تۆماربون"
         android:textSize="20dp"
-        android:textColor="@color/gradient_start_color"
-        android:drawableTint="@color/gradient_start_color"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

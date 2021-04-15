@@ -2,14 +2,14 @@ package com.example.car_s;
 
 import android.os.Bundle;
 
-import com.google.android.material.badge.BadgeDrawable;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.badge.BadgeDrawable;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 
 public class Main_Repairman extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class Main_Repairman extends AppCompatActivity {
                         tab.setIcon(R.drawable.ic_active);
                         BadgeDrawable badgeDrawable = tab.getOrCreateBadge();
                         badgeDrawable.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),
-                                R.color.colorAccent2));
+                                R.color.colorAccent));
                         badgeDrawable.setVisible(true);
                         break;
                     }
@@ -49,7 +49,7 @@ public class Main_Repairman extends AppCompatActivity {
                         tab.setIcon(R.drawable.ic_pending);
                         BadgeDrawable badgeDrawable = tab.getOrCreateBadge();
                         badgeDrawable.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),
-                                R.color.colorAccent2));
+                                R.color.colorAccent));
                         badgeDrawable.setVisible(true);
                         badgeDrawable.setNumber(100);
                         badgeDrawable.setMaxCharacterCount(3);

@@ -2,16 +2,7 @@ package com.example.car_s;
 
 public class RepairmenHelperClass {
 
-    String id,full_name,age_get,phone,city,job_type,experience,pass;
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    String full_name,username,age_get,phone,city,job_type,experience,pass;
 
     public String getFull_name() {
         return full_name;
@@ -61,10 +52,26 @@ public class RepairmenHelperClass {
         this.pass = pass;
     }
 
-    public RepairmenHelperClass(String id, String full_name, String age_get, String phone, String city, String job_type, String experience, String pass) {
+    public String getUsername() {
+        return username;
+    }
 
-        this.id=id;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public RepairmenHelperClass(String full_name, String username, String age_get, String phone, String city, String job_type, String experience, String pass) {
+
         this.full_name=full_name;
+        this.username=username;
         this.age_get=age_get;
         this.phone=phone;
         this.city=city;

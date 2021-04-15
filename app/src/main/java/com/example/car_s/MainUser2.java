@@ -8,18 +8,21 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainUser2 extends AppCompatActivity {
 
@@ -32,19 +35,13 @@ public class MainUser2 extends AppCompatActivity {
     ArrayList<String> Info5 = new ArrayList<>();
     ArrayList<String> Info6 = new ArrayList<>();
 
+    
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_user2);
-
-
-
-
-
-
-
 
         databaseReference= FirebaseDatabase.getInstance().getReference().child("repairmen");
         List = (ListView) findViewById(R.id.list);
@@ -135,7 +132,29 @@ public class MainUser2 extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
+            final String[] usernameDB = {null};
+            final String[] jobDB = {null};
+            final String[] experDB = {null};
+            final String[] numberDB = {null};
+            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
+
+            databaseReference.addValueEventListener(new ValueEventListener(){
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    usernameDB[0] = dataSnapshot.child("username").getValue(String.class);
+                    jobDB[0] = dataSnapshot.child("job_type").getValue(String.class);
+                    experDB[0] = dataSnapshot.child("experience").getValue(String.class);
+                    numberDB[0] = dataSnapshot.child("phone").getValue(String.class);
+                }
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Toast.makeText(MainUser2.this, "Failed to get the data", Toast.LENGTH_SHORT).show();
+                }
+            });
+
             View view1 = getLayoutInflater().inflate(R.layout.row_data,null);
+
             //getting view in row_data
             TextView name = view1.findViewById(R.id.naw);
             TextView pisha = view1.findViewById(R.id.pisha);
@@ -144,10 +163,10 @@ public class MainUser2 extends AppCompatActivity {
 
           //  ImageView image = view1.findViewById(R.id.rasm);
 
-            name.setText(Info.toString());
-            pisha.setText(Info6.toString());
-            exper.setText(Info3.toString());
-            number.setText(Info5.toString());
+            name.setText(usernameDB.toString());
+            pisha.setText(jobDB.toString());
+            exper.setText(experDB.toString());
+            number.setText(numberDB.toString());
 
           //  image.setImageResource();
             return view1;
